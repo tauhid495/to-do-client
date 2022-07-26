@@ -59,7 +59,7 @@ function App() {
       <Routes>
         <Route path="/calander" element={<Calander />} />
         <Route path="/todo" element={<ToDo handleAdd={handleAdd} tasks={tasks} handleDelete={handleDelete} />} />
-        <Route path="/completed" element={<Completed />} />
+        <Route path="/completed" element={<Completed tasks={tasks} />} />
         <Route path='/edittodo/:id' element={<EditToDo />} />
       </Routes>
       <Footer />

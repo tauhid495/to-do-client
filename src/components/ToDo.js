@@ -4,7 +4,7 @@ import TaskList from './TaskList';
 
 const ToDo = ({ handleAdd, tasks, handleDelete }) => {
 
-
+    
     return (
         <div className=''>
             <div class="py-10 min-h-screen bg-base-200">
