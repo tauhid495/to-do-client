@@ -1,7 +1,6 @@
 import NavBar from "./components/NavBar";
 import { Routes, Route } from 'react-router-dom';
 import ToDo from "./components/ToDo";
-import Calander from "./components/Calander";
 import Completed from "./components/Completed";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
@@ -9,6 +8,7 @@ import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 import EditToDo from "./components/EditToDo";
+import Home from "./components/Home";
 
 
 
@@ -43,7 +43,6 @@ function App() {
 
 
 
-
   useEffect(() => {
     const getTasks = async () => {
       const { data } = await axios.get('http://localhost:5000/tasks');
@@ -57,7 +56,8 @@ function App() {
       <ToastContainer />
       <NavBar />
       <Routes>
-        <Route path="/calander" element={<Calander />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/todo" element={<ToDo handleAdd={handleAdd} tasks={tasks} handleDelete={handleDelete} />} />
         <Route path="/completed" element={<Completed tasks={tasks} />} />
         <Route path='/edittodo/:id' element={<EditToDo />} />
