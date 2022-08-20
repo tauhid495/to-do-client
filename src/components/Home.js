@@ -1,38 +1,39 @@
 import React from 'react';
 import AnalogueClock from 'react-analogue-clock';
-import Calender from './Calender';
-
-
+import Calander from './Calander';
 
 
 const Home = () => {
-
+    
 
     const clockOptions = {
-        baseColor: 'midnightblue',
+        baseColor: 'lightgray',
         borderColor: 'darkorange',
-        borderWidth: 9,
-        centerColor: 'gray',
+        borderWidth: 11,
+        centerColor: 'firebrick',
         handColors: {
-            hour: 'gray',
-            minute: 'gray',
+            hour: 'black',
+            minute: 'black',
             second: '#8b0000',
         },
-        notchColor: 'navajowhite',
+        notchColor: 'gray',
         numbersColor: '#d0d0d0',
         showNumbers: false,
-        size: 200
+        size: 220
     }
 
 
     return (
-        <div className='min-h-screen'>
-
-            <div className='flex items-center justify-center' >
-                <AnalogueClock {...clockOptions} />
+        <div className='flex'>
+            <div className='w-1/4'>
+                <Calander />
             </div>
-            <div className='flex items-center justify-center'>
-                <Calender />
+            <div className='w-2/4'>
+            </div>
+            <div className=' w-1/4 min-h-screen pt-7'>
+                <div className='flex flex-col items-center' >
+                    <AnalogueClock {...clockOptions} />
+                </div>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const EditToDo = () => {
     // const [newText, setNewText] = useState();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/tasks/${id}`)
+        axios.get(`https://to-do-tauhid.herokuapp.com/tasks/${id}`)
             .then(data => {
                 setTask(data.data.task)
                 // console.log(data.data.task);
@@ -25,12 +25,12 @@ const EditToDo = () => {
         if (e.target.name.value === '') {
             return;
         } else {
-            axios.put(`http://localhost:5000/tasks/${id}`, {
+            axios.put(`https://to-do-tauhid.herokuapp.com/tasks/${id}`, {
                 task: newText,
             })
-                .then(data => {
+                // .then(data => {
 
-                })
+                // })
         }
 
         navigate('/todo');
