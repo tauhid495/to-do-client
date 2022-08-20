@@ -4,7 +4,7 @@ import Calander from './Calander';
 
 
 const Home = () => {
-    
+
 
     const clockOptions = {
         baseColor: 'lightgray',
@@ -17,9 +17,9 @@ const Home = () => {
             second: '#8b0000',
         },
         notchColor: 'gray',
-        numbersColor: '#d0d0d0',
-        showNumbers: false,
-        size: 220
+        numbersColor: 'gray',
+        showNumbers: true,
+        size: 250
     }
 
 
